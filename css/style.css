@@ -326,6 +326,9 @@ body{
 }
 #accomodotations {grid-area:accom; padding-left: unset; background-color: unset; padding: unset;}
 #accomodotations div:nth-child(1){width: 85%; margin:auto;}
+#mostpopular .imagebox{
+   margin: 5% auto; 
+}
 #mostpopular{grid-area:mostpop; border-radius: unset;}
 #mainmenu{
     grid-template-columns: 100%;
