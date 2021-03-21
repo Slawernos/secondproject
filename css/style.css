@@ -170,9 +170,10 @@ h4{
 }
 
 #mainmenu{
+    min-height: 900px;
     margin-top: 5em;
     display: grid;
-    grid-template-columns: minmax(760px,65%) minmax(560px, 30%);
+    grid-template-columns: minmax(760px,65%) minmax(560px, 35%);
     grid-gap: 2%;
 }
 
@@ -197,21 +198,19 @@ h4{
     border-radius: 1em 1em 1em 1em ;
     background-color:white;
     width: 85%;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 #accomodotations img{
     border-radius: 1em 1em 0 0 ;
     display: block;
-    width: 95%;
+    width: 98%;
     height:150px;
-    margin: 1%;
+    margin: auto;
     padding: 1%;
     object-fit: none;
 }
 .imagebox{
-
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .imagebox p:nth-child(2){
@@ -237,14 +236,14 @@ h4{
 
     border-radius: 1em 1em 1em 1em;
     background-color: #F2F2F2;
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-rows: 75px repeat(auto-fit, minmax(50px, 1fr));
     padding:30px;
 }
 #mostpopular .imagebox img{
     border-radius: 1em 0em 0em 1em ;
-    width:30%;
-    height:200px;
+    width:90%;
+    height:150px;
     object-fit: none;
     margin:1%;
 
@@ -252,6 +251,9 @@ h4{
 
 }
 #mostpopular .imagebox{
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 40% 60%;
     background-color: #ffffff;
     border-radius: 1em 1em 1em 1em ;
     margin: auto;
@@ -272,7 +274,43 @@ h4{
 
 }
 
+#activitiesmenu{
+    background-color: unset;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(150px, 300px));
+    grid-template-areas:
+    "a b c d"
+    "a e c f" ;
 
+}
+#activitiesmenu div{  
+    max-width: 300px;  
+    width: 65%;
+    height: 100%;
+
+}
+#activitiesmenu .imagebox{
+    display:grid;
+    grid-template-rows: auto 3em;
+    object-fit: none;
+    margin: 5% auto;
+    height: 90%;
+    border-radius: 5%;
+
+}
+#activitiesmenu img{
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+    margin:auto;
+    object-fit: cover;
+}
+#activitiesmenu div:nth-child(1){grid-area:a;}
+#activitiesmenu div:nth-child(2){grid-area:b;}
+#activitiesmenu div:nth-child(3){grid-area:c;}
+#activitiesmenu div:nth-child(4){grid-area:d;}
+#activitiesmenu div:nth-child(5){grid-area:e;}
+#activitiesmenu div:nth-child(5){grid-area:f;}
 @media only screen and (max-width:550px) {
 
 body{
@@ -296,7 +334,7 @@ body{
 #navbar div:nth-child(3){grid-area:c;}
 #navbar div:nth-child(4){grid-area:d;}
 #navbar div:nth-child(5){grid-area:e;}
-.selectors:active{
+.selectors:focus{
     color:#0065FC;
     border-top:none;
     border-bottom: #0065FC 1px solid;
