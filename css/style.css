@@ -14,7 +14,7 @@ body{
     min-width: 1024px;
     font-family: 'Raleway', 'Courier New', Courier, monospace;
     margin: auto;
-    padding-left: 1%;
+
 }
 
 #navbar{
@@ -350,8 +350,12 @@ h4{
     margin-top: 50px;
     display: grid;
     grid-template-columns: auto auto auto;
-
     background-color: #F2F2F2;
+}
+#footer div{
+    width:85%;
+    margin:auto;
+
 }
 
 #activitiesmenu .imagebox p{
