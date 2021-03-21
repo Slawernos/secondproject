@@ -267,7 +267,8 @@ h4{
 #mostpopular .imagebox img{
     border-radius: 1em 0em 0em 1em ;
     width:90%;
-    height:150px;
+    max-height:150px;
+    height: 90%;
     object-fit: cover;
     margin:1%;
 
