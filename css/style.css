@@ -39,9 +39,8 @@ a:visited{
 .selectors:focus{
     color:#0065FC;
     border-top: #0065FC 1px solid;
-    
-
 }
+
 
 #navbar div:nth-child(3),#navbar div:nth-child(4),#navbar div:nth-child(5) {
     text-align: center;
@@ -400,6 +399,9 @@ body{
     border-top:none;
     border-bottom: #0065FC 1px solid;
 
+}
+.selectors{
+    border-bottom:#F2F2F2 1px solid;
 }
 
 #filtermenu{
