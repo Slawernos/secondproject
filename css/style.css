@@ -295,10 +295,11 @@ h4{
     object-fit: none;
     margin: 5% auto;
     height: 90%;
-    border-radius: 5%;
+    border-radius: 1em;
 
 }
 #activitiesmenu img{
+    border-radius: 1em 1em 0 0 ;
     overflow: hidden;
     width:100%;
     height: 100%;
@@ -311,6 +312,20 @@ h4{
 #activitiesmenu div:nth-child(4){grid-area:d;}
 #activitiesmenu div:nth-child(5){grid-area:e;}
 #activitiesmenu div:nth-child(5){grid-area:f;}
+
+#footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    background-color: #F2F2F2;
+}
+
+
+
+
+
+
 @media only screen and (max-width:550px) {
 
 body{
