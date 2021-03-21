@@ -230,6 +230,8 @@ h4{
 
 }
 .imagebox{
+    height:90%;
+    max-height: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -253,8 +255,11 @@ h4{
     height: 100%;
     object-fit: unset;
 }
+#mostpopular div{
+    max-height: 170px;
+}
 #mostpopular .imagebox p{
-    margin: 5% 5% ;
+  margin-top: 5%;
 }
 #mostpopular{
 
@@ -266,11 +271,11 @@ h4{
 }
 #mostpopular .imagebox img{
     border-radius: 1em 0em 0em 1em ;
-    width:90%;
-    max-height:150px;
-    height: 90%;
+    width:97%;
+    overflow: hidden;
+    height: 97%;
     object-fit: cover;
-    margin:1%;
+    margin:auto;
 
 
 
