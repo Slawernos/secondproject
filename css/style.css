@@ -1,3 +1,4 @@
+/* Font settings setcion */
 @font-face{
     font-family: "Raleway";
     src: url("Raleway-Regular.ttf")
@@ -9,26 +10,30 @@
     font-weight: bold;
 
 }
+/* Settings for smooth scroll, only works on desktop */
 html{
     scroll-behavior: smooth;
 
 }
+/* Body max with to avoid issues on too high shrinking*/
 body{
     max-width: 2480px;
-    min-width: 1024px;
+    /* Font settings setcion fir whole page */
     font-family: 'Raleway', 'Courier New', Courier, monospace;
+    /* Centering Body */
     margin: auto;
+    /* Creating padding for body*/
     padding: 1em 1em;
-    z-index: 0;
-
+    
 }
 
+/* Using grid to layout navbar (first menu section with logo and signup / accomodation / activities */
 #navbar{
     display: grid;  
-
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
     margin-top: 0px;
 }
+/* removing text decoration and aligning links */
 #navbar a{
     text-decoration: none;
     display: flex;
@@ -39,28 +44,32 @@ body{
     min-height: 50px;
     margin:auto;
 }
+/* disabling visitied link differences*/
 a:visited{
     color:black;
 }
+/* changing color on hover */
 .selectors:hover{
     color:#0065FC;
     border-top: #0065FC 1px solid;
 }
+/* adding permanent border on selectors ( accomodation and activities ) */
 .selectors{
     border-top: #F2F2F2 1px solid;
 }
-
+/* aligning text in the navbar child divs */
 #navbar div:nth-child(3),#navbar div:nth-child(4),#navbar div:nth-child(5) {
     text-align: center;
     min-height: 50px;
 }
 
-
+/* different color and font style for signup */
 #signup{
     color:#0065FC;
     font-weight: bold;
 }
 
+/* Style for location section with search text */
 h3 {
  font-weight: bold;
 }
@@ -151,6 +160,8 @@ h4{
     font-weight: bold;
     margin: 0px;
 }
+
+/* Style for filter section */
 #filters{
     padding-top: 2em;
     display: flex;
@@ -215,6 +226,7 @@ h4{
     margin:auto;    
     align-self: center;
 }
+/* style for info logo and text */
 #infotext{
     margin: 1em 0;
     width:100%;
@@ -243,20 +255,23 @@ h4{
     height: 100%;
 
 }
-
+/* General style for main menu and child imageboxes */
 #mainmenu{
     min-height: 900px;
     display: grid;
     grid-template-columns:60% 35%;
     justify-content: space-between;
 }
-
+/* child accomodation menu settings */
 #accomodotations{
     border-radius: 1em 1em 1em 1em;
     background-color: #F2F2F2;
     padding: 30px;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));;
+    grid-template-rows: auto repeat(2, minmax(350px, 1fr));
+    grid-auto-rows: auto;
+
 
 }
 
@@ -285,6 +300,7 @@ h4{
     object-fit: cover;
     align-self: flex-start;
 }
+/*style for stars*/
 .stars , #accomodotations .stars{
     height: 2em;
     max-height: 2em;
@@ -301,6 +317,7 @@ h4{
     object-fit: unset;
 
 }
+/*image cards settings */
 .imagebox{
     display:flex;
     flex-direction: column;
@@ -310,7 +327,7 @@ h4{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
+/*making clickable all cards by moving extra element on top of each */
 .linkbutton{
     position: absolute;
     width: 100%;
@@ -333,6 +350,7 @@ h4{
     margin-top: 3em;
     margin-bottom: 3em;
 }
+/* most popular image card settings */
 #chartico{
     height: 50%;
     align-self: center;
@@ -354,6 +372,7 @@ h4{
     background-color: #F2F2F2;
     display:grid;
     grid-template-rows: 75px repeat(4, minmax(50px, 250px)) auto;
+    
     padding:30px;
 }
 #mostpopular .imagebox img{
@@ -367,6 +386,7 @@ h4{
 
 
 }
+/* most popular card settings, image alignment and stars alignments */
 #mostpopular .imagebox{
     max-width: 500px;
     display: grid;
@@ -402,6 +422,7 @@ h4{
     display:flex;
     flex-flow: row wrap;
 }
+/* activity menu section , starting with a separate div for anchoring to the right position */
 #activityanchor{
     padding-left:30px;
     width:90%;
@@ -445,6 +466,7 @@ h4{
      margin:0 auto;
     object-fit: cover;
 }
+/* specific order for activities and set up for later media queries preparement */
 #activitiesmenu div:nth-child(1){grid-area:a;}
 #activitiesmenu div:nth-child(2){grid-area:b;}
 #activitiesmenu div:nth-child(3){grid-area:c;}
@@ -467,11 +489,13 @@ h4{
 #activitiesmenu .imagebox p{
    align-self: center;
 }
-
+#footer a {
+    text-decoration: none;
+}
 
 /*
 *************************************************************************************************
-MEDIA QUERY
+MEDIA QUERY --- ALL SETTINGS ONLY FOR MOBILE / LOW RESOLUTION DEVICES
 *************************************************************************************************
 */
 @media only screen and (max-width:1024px) {
